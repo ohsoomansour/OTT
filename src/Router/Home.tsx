@@ -7,6 +7,7 @@ import { category, isSoundAtom} from "../recoil";
 import ReactPlayer from "react-player";
 import React  from "react";
 import { useRecoilState } from "recoil";
+import { Helmet } from "react-helmet";
 
 const Wrapper = styled.div`
   background-color:black;
@@ -133,6 +134,9 @@ export default function Home() {
 
       return (
       <Wrapper>
+        <Helmet>
+          <title>OTT</title>
+        </Helmet>
         {nowPlayingLoading ? (
           <Loader>Loading...</Loader>
         ) : (
